@@ -10,7 +10,7 @@ desc 'outputs hello to the terminal'
   end
 end
 
-  
+namespace :db do
   desc 'migrate changes to your database'
   task :environment do
   require_relative './config/environment'
@@ -23,6 +23,7 @@ end
   task :seed do
     require_relative './db/seeds.rb'
   end
+end
   
   desc 'drop into the Pry console'
   task :console => :environment do
